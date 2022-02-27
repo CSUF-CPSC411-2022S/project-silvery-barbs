@@ -17,6 +17,7 @@
 		F2E0669427C7080B002AFFC7 /* Dnd_PlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E0669327C7080B002AFFC7 /* Dnd_PlannerUITests.swift */; };
 		F2E0669627C7080B002AFFC7 /* Dnd_PlannerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E0669527C7080B002AFFC7 /* Dnd_PlannerUITestsLaunchTests.swift */; };
 		F2E066A327C7085D002AFFC7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F2E066A227C7085D002AFFC7 /* .gitignore */; };
+		F2E066A527CC247B002AFFC7 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E066A427CC247B002AFFC7 /* MapManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		F2E0669327C7080B002AFFC7 /* Dnd_PlannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dnd_PlannerUITests.swift; sourceTree = "<group>"; };
 		F2E0669527C7080B002AFFC7 /* Dnd_PlannerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dnd_PlannerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F2E066A227C7085D002AFFC7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		F2E066A427CC247B002AFFC7 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				F2E0667B27C7080B002AFFC7 /* Assets.xcassets */,
 				F2E0667D27C7080B002AFFC7 /* LaunchScreen.storyboard */,
 				F2E0668027C7080B002AFFC7 /* Info.plist */,
+				F2E066A427CC247B002AFFC7 /* MapManager.swift */,
 			);
 			path = "Dnd-Planner";
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2E066A527CC247B002AFFC7 /* MapManager.swift in Sources */,
 				F2E0667727C70809002AFFC7 /* ViewController.swift in Sources */,
 				F2E0667327C70809002AFFC7 /* AppDelegate.swift in Sources */,
 				F2E0667527C70809002AFFC7 /* SceneDelegate.swift in Sources */,

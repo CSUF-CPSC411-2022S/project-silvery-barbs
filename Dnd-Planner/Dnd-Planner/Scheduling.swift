@@ -5,8 +5,14 @@
 //  Created by Minkyu Park on 2/25/22.
 //
 
-import Foundation
+import SwiftUI
 
-struct Scheduling {
-    //add more code here
-}
+/*@main
+
+struct Scheduling: AppDelegate {
+    var body: some Scene {
+        WindowGroup {
+            SchedulingView()
+        }
+    }
+}*/

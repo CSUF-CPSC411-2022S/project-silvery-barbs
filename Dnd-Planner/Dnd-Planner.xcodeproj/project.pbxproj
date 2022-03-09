@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		064F355B27C9CE2E0028E5F3 /* Scheduling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064F355A27C9CE2E0028E5F3 /* Scheduling.swift */; };
+		06D4E59027D8487B00A4EA78 /* SchedulingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D4E58F27D8487B00A4EA78 /* SchedulingView.swift */; };
+		06D4E59327D874BE00A4EA78 /* SchedulingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D4E59127D874B400A4EA78 /* SchedulingUITests.swift */; };
 		F2E0667327C70809002AFFC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E0667227C70809002AFFC7 /* AppDelegate.swift */; };
 		F2E0667527C70809002AFFC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E0667427C70809002AFFC7 /* SceneDelegate.swift */; };
 		F2E0667727C70809002AFFC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E0667627C70809002AFFC7 /* ViewController.swift */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		064F355A27C9CE2E0028E5F3 /* Scheduling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheduling.swift; sourceTree = "<group>"; };
+		06D4E58F27D8487B00A4EA78 /* SchedulingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulingView.swift; sourceTree = "<group>"; };
+		06D4E59127D874B400A4EA78 /* SchedulingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulingUITests.swift; sourceTree = "<group>"; };
 		F2E0666F27C70809002AFFC7 /* Dnd-Planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dnd-Planner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E0667227C70809002AFFC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2E0667427C70809002AFFC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 				F2E0667D27C7080B002AFFC7 /* LaunchScreen.storyboard */,
 				F2E0668027C7080B002AFFC7 /* Info.plist */,
 				064F355A27C9CE2E0028E5F3 /* Scheduling.swift */,
+				06D4E58F27D8487B00A4EA78 /* SchedulingView.swift */,
 			);
 			path = "Dnd-Planner";
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 			children = (
 				F2E0669327C7080B002AFFC7 /* Dnd_PlannerUITests.swift */,
 				F2E0669527C7080B002AFFC7 /* Dnd_PlannerUITestsLaunchTests.swift */,
+				06D4E59127D874B400A4EA78 /* SchedulingUITests.swift */,
 			);
 			path = "Dnd-PlannerUITests";
 			sourceTree = "<group>";
@@ -268,6 +274,7 @@
 				F2E0667727C70809002AFFC7 /* ViewController.swift in Sources */,
 				064F355B27C9CE2E0028E5F3 /* Scheduling.swift in Sources */,
 				F2E0667327C70809002AFFC7 /* AppDelegate.swift in Sources */,
+				06D4E59027D8487B00A4EA78 /* SchedulingView.swift in Sources */,
 				F2E0667527C70809002AFFC7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +293,7 @@
 			files = (
 				F2E0669627C7080B002AFFC7 /* Dnd_PlannerUITestsLaunchTests.swift in Sources */,
 				F2E0669427C7080B002AFFC7 /* Dnd_PlannerUITests.swift in Sources */,
+				06D4E59327D874BE00A4EA78 /* SchedulingUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,15 @@
 import UIKit
 
 @main
+
+/*struct AppDelegate: App {
+    var body: some Scene {
+        WindowGroup{
+            SchedulingView()
+        }
+    }
+}*/
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 

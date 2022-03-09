@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A33CEC227D85E1900DBF8A1 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A33CEC127D85E1900DBF8A1 /* UserTests.swift */; };
+		7A33CEC727D8668600DBF8A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A33CEC527D863AC00DBF8A1 /* ContentView.swift */; };
 		7AA71FDC27C8340500BFB722 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA71FDB27C8340500BFB722 /* User.swift */; };
 		F2E0667327C70809002AFFC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E0667227C70809002AFFC7 /* AppDelegate.swift */; };
 		F2E0667527C70809002AFFC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E0667427C70809002AFFC7 /* SceneDelegate.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A33CEC127D85E1900DBF8A1 /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
+		7A33CEC527D863AC00DBF8A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7AA71FDB27C8340500BFB722 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F2E0666F27C70809002AFFC7 /* Dnd-Planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dnd-Planner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E0667227C70809002AFFC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,9 +84,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A33CEC827D95AE300DBF8A1 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				7AA71FDB27C8340500BFB722 /* User.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		F2E0666627C70809002AFFC7 = {
 			isa = PBXGroup;
 			children = (
+				7A33CEC827D95AE300DBF8A1 /* User */,
 				F2E066A227C7085D002AFFC7 /* .gitignore */,
 				F2E0667127C70809002AFFC7 /* Dnd-Planner */,
 				F2E0668827C7080B002AFFC7 /* Dnd-PlannerTests */,
@@ -104,6 +117,7 @@
 		F2E0667127C70809002AFFC7 /* Dnd-Planner */ = {
 			isa = PBXGroup;
 			children = (
+				7A33CEC527D863AC00DBF8A1 /* ContentView.swift */,
 				F2E0667227C70809002AFFC7 /* AppDelegate.swift */,
 				F2E0667427C70809002AFFC7 /* SceneDelegate.swift */,
 				F2E0667627C70809002AFFC7 /* ViewController.swift */,
@@ -111,7 +125,6 @@
 				F2E0667B27C7080B002AFFC7 /* Assets.xcassets */,
 				F2E0667D27C7080B002AFFC7 /* LaunchScreen.storyboard */,
 				F2E0668027C7080B002AFFC7 /* Info.plist */,
-				7AA71FDB27C8340500BFB722 /* User.swift */,
 			);
 			path = "Dnd-Planner";
 			sourceTree = "<group>";
@@ -120,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				F2E0668927C7080B002AFFC7 /* Dnd_PlannerTests.swift */,
+				7A33CEC127D85E1900DBF8A1 /* UserTests.swift */,
 			);
 			path = "Dnd-PlannerTests";
 			sourceTree = "<group>";
@@ -266,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AA71FDC27C8340500BFB722 /* User.swift in Sources */,
+				7A33CEC727D8668600DBF8A1 /* ContentView.swift in Sources */,
 				F2E0667727C70809002AFFC7 /* ViewController.swift in Sources */,
 				F2E0667327C70809002AFFC7 /* AppDelegate.swift in Sources */,
 				F2E0667527C70809002AFFC7 /* SceneDelegate.swift in Sources */,
@@ -276,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A33CEC227D85E1900DBF8A1 /* UserTests.swift in Sources */,
 				F2E0668A27C7080B002AFFC7 /* Dnd_PlannerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

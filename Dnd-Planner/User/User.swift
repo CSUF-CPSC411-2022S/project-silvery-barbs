@@ -74,7 +74,13 @@ class User {
     
     //TODO
     //create a function to verify users
-    //create function that allows for users to set group status
     //create functions to add emails and phone numbers to already created accounts
     
+    func set_user_DM_status(){
+        //TODO UI is set up, how to link it to content view?
+    }
+    
+    func set_user_group_status(){
+        //TODO UI is set up, how to link it to content view?
+    }
 }

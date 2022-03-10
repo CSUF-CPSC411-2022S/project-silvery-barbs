@@ -5,11 +5,23 @@
 //  Created by Kierstyn Just on 2/27/22.
 //
 
+//Create classes to represent information and relationships in your assigned feature.
+//Create unit tests to check your structures and classes.
+//Create a screen to show how users will use your assigned feature.
+//Document your progress.
+
 import Foundation
 
-struct User {
+class User: Identifiable {
     var username: String
     var milesAway: Int
+    
+    init(name: String, miles: Int) {
+        username = name
+        milesAway = miles
+    }
+    
+    deinit {}
 }
 
 // ---- MapManager Functionality ----
@@ -36,12 +48,21 @@ class MapManager {
     init() {
         currentLocation = ""
         mileRadius = 0
+        
+        // sample data
+        nearbyUsers.append(User(name: "Draco", miles: 2))
+        nearbyUsers.append(User(name: "Ada", miles: 8))
+        nearbyUsers.append(User(name: "Akuma", miles: 10))
+        nearbyUsers.append(User(name: "Puu", miles: 12))
+        nearbyUsers.append(User(name: "Zorro", miles: 45))
+        nearbyUsers.append(User(name: "Lilith", miles: 45))
     }
     
     deinit {}
     
-    // get nearby users
-    func getNearbyUsers() {
-
-    }
+    // FUNCTIONS
+    // getCurrentLocation
+    // setMileRadius
+    // getNearbyUsers (requires current location & radius)
+    
 }

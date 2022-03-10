@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F269939627D81A7B004CC884 /* MapManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F269939527D81A7B004CC884 /* MapManagerUITests.swift */; };
+		F269939827D83C71004CC884 /* NearbyUsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F269939727D83C71004CC884 /* NearbyUsersView.swift */; };
 		F2E0667327C70809002AFFC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E0667227C70809002AFFC7 /* AppDelegate.swift */; };
 		F2E0667527C70809002AFFC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E0667427C70809002AFFC7 /* SceneDelegate.swift */; };
 		F2E0667727C70809002AFFC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E0667627C70809002AFFC7 /* ViewController.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F269939527D81A7B004CC884 /* MapManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManagerUITests.swift; sourceTree = "<group>"; };
+		F269939727D83C71004CC884 /* NearbyUsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyUsersView.swift; sourceTree = "<group>"; };
 		F2E0666F27C70809002AFFC7 /* Dnd-Planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dnd-Planner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E0667227C70809002AFFC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2E0667427C70809002AFFC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 				F2E0667D27C7080B002AFFC7 /* LaunchScreen.storyboard */,
 				F2E0668027C7080B002AFFC7 /* Info.plist */,
 				F2E066A427CC247B002AFFC7 /* MapManager.swift */,
+				F269939727D83C71004CC884 /* NearbyUsersView.swift */,
 			);
 			path = "Dnd-Planner";
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 			children = (
 				F2E0669327C7080B002AFFC7 /* Dnd_PlannerUITests.swift */,
 				F2E0669527C7080B002AFFC7 /* Dnd_PlannerUITestsLaunchTests.swift */,
+				F269939527D81A7B004CC884 /* MapManagerUITests.swift */,
 			);
 			path = "Dnd-PlannerUITests";
 			sourceTree = "<group>";
@@ -269,6 +275,7 @@
 				F2E0667727C70809002AFFC7 /* ViewController.swift in Sources */,
 				F2E0667327C70809002AFFC7 /* AppDelegate.swift in Sources */,
 				F2E0667527C70809002AFFC7 /* SceneDelegate.swift in Sources */,
+				F269939827D83C71004CC884 /* NearbyUsersView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F269939627D81A7B004CC884 /* MapManagerUITests.swift in Sources */,
 				F2E0669627C7080B002AFFC7 /* Dnd_PlannerUITestsLaunchTests.swift in Sources */,
 				F2E0669427C7080B002AFFC7 /* Dnd_PlannerUITests.swift in Sources */,
 			);

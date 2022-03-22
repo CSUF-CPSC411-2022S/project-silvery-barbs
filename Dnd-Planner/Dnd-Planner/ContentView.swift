@@ -33,28 +33,69 @@ struct ContentView: View {
             VStack {
                 Text("Name: ")
                     .font(.custom("Courier New", size: 20))
+                    .foregroundColor(Color.white)
+                    .padding(10)
+                    .background(Color.black)
+                    .cornerRadius(10)
+                TextField("Name", text: $username)
+                    .font(.custom("Arial", size: 20))
+                    .frame(width: 250, alignment: .trailing)
             }
             VStack {
                 Text("Password: ")
                     .font(.custom("Courier New", size: 20))
+                    .foregroundColor(Color.white)
+                    .padding(10)
+                    .background(Color.black)
+                    .cornerRadius(10)
+                TextField("Password", text: $password)
+                    .font(.custom("Arial", size: 20))
+                    .frame(width: 250, alignment: .trailing)
             }
             VStack {
                 Text("Email: ")
                     .font(.custom("Courier New", size: 20))
+                    .foregroundColor(Color.white)
+                    .padding(10)
+                    .background(Color.black)
+                    .cornerRadius(10)
+                TextField("Email", text: $email)
+                    .font(.custom("Arial", size: 20))
+                    .frame(width: 250, alignment: .trailing)
             }
             VStack {
                 Text("Phone Number: ")
                     .font(.custom("Courier New", size: 20))
+                    .foregroundColor(Color.white)
+                    .padding(10)
+                    .background(Color.black)
+                    .cornerRadius(10)
+                TextField("Phone Number", text: $phonenumber)
+                    .font(.custom("Arial", size: 20))
+                    .frame(width: 250, alignment: .trailing)
             }
             VStack {
                 Text("Looking to DM? ")
+                    .foregroundColor(Color.white)
+                    .padding(10)
+                    .background(Color.black)
+                    .cornerRadius(10)
+                
                     Toggle("Looking to DM?", isOn: $DM_status)
-                    .font(.custom("Courier New", size: 20))
+                        .font(.custom("Courier New", size: 20))
+                        .frame(width: 250, alignment: .trailing)
+                
             }
             VStack {
                 Text("Looking for a group? ")
+                    .foregroundColor(Color.white)
+                    .padding(10)
+                    .background(Color.black)
+                    .cornerRadius(10)
+                
                     Toggle("Looking for a group?", isOn: $group_status)
-                    .font(.custom("Courier New", size: 20))
+                        .font(.custom("Courier New", size: 20))
+                        .frame(width: 250, alignment: .trailing)
             }.padding()
         }
     }

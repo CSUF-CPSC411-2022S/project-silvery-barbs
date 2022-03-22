@@ -29,34 +29,34 @@ struct ContentView: View {
                 .padding(10)
                 .background(Color.black)
                 .cornerRadius(10)
+            //user info
+            VStack {
+                Text("Name: ")
+                    .font(.custom("Courier New", size: 20))
+            }
+            VStack {
+                Text("Password: ")
+                    .font(.custom("Courier New", size: 20))
+            }
+            VStack {
+                Text("Email: ")
+                    .font(.custom("Courier New", size: 20))
+            }
+            VStack {
+                Text("Phone Number: ")
+                    .font(.custom("Courier New", size: 20))
+            }
+            VStack {
+                Text("Looking to DM? ")
+                    Toggle("Looking to DM?", isOn: $DM_status)
+                    .font(.custom("Courier New", size: 20))
+            }
+            VStack {
+                Text("Looking for a group? ")
+                    Toggle("Looking for a group?", isOn: $group_status)
+                    .font(.custom("Courier New", size: 20))
+            }.padding()
         }
-        //user info
-        VStack {
-            Text("Name: ")
-                .font(.custom("Courier New", size: 20))
-        }
-        VStack {
-            Text("Password: ")
-                .font(.custom("Courier New", size: 20))
-        }
-        VStack {
-            Text("Email: ")
-                .font(.custom("Courier New", size: 20))
-        }
-        VStack {
-            Text("Phone Number: ")
-                .font(.custom("Courier New", size: 20))
-        }
-        VStack {
-            Text("Looking to DM? ")
-                Toggle("Looking to DM?", isOn: $DM_status)
-                .font(.custom("Courier New", size: 20))
-        }
-        VStack {
-            Text("Looking for a group? ")
-                Toggle("Looking for a group?", isOn: $group_status)
-                .font(.custom("Courier New", size: 20))
-        }.padding()
     }
 }
 
@@ -75,8 +75,8 @@ struct Information: View {
         Text(email)
         Text(phonenumber)
         
-        Text(DM_status)
-        Text(group_status)
+        //Text(DM_status)
+        //Text(group_status)
     }
 }
     

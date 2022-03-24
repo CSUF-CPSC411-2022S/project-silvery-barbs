@@ -7,12 +7,18 @@
 
 import SwiftUI
 
-/*
 
-struct Scheduling: AppDelegate {
-    var body: some Scene {
-        WindowGroup {
-            SchedulingView()
+struct SchedulingInfo: View {
+    var body: some View {
+        VStack {
+            List {
+                Section (header: Text ("Scheduling")){
+                    Text ("Name")
+                    Text ("Start Time")
+                    Text ("End Time")
+                }
+            }
+            Spacer()
         }
     }
-}*/
+}

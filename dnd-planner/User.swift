@@ -7,16 +7,16 @@
 
 import Foundation
 
-class User {
-    var username: String
+class User: ObservableObject, Identifiable {
+    @Published var username: String
     //how do you hash passwords and create a secure database???
-    var password: String
-    var email: String?
-    var phonenumber: String?
+    @Published var password: String
+    @Published var email: String?
+    @Published var phonenumber: String?
     
-    var DM_status: Bool
-    var group_status: Bool
-    var verified: Bool
+    @Published var DM_status: Bool
+    @Published var group_status: Bool
+    @Published var verified: Bool
     //TODO
     //how do you find a user location??? need a var for that
     

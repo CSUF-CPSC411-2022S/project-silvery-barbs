@@ -14,6 +14,8 @@
 		F26993B727DAA0CE004CC884 /* dnd_plannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26993B627DAA0CE004CC884 /* dnd_plannerTests.swift */; };
 		F26993C127DAA0CE004CC884 /* dnd_plannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26993C027DAA0CE004CC884 /* dnd_plannerUITests.swift */; };
 		F26993C327DAA0CE004CC884 /* dnd_plannerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26993C227DAA0CE004CC884 /* dnd_plannerUITestsLaunchTests.swift */; };
+		F26993D027DAA32C004CC884 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26993CF27DAA32C004CC884 /* MapManager.swift */; };
+		F26993D227DAA34C004CC884 /* NearbyUsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26993D127DAA34C004CC884 /* NearbyUsersView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		F26993BC27DAA0CE004CC884 /* dnd-plannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "dnd-plannerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F26993C027DAA0CE004CC884 /* dnd_plannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dnd_plannerUITests.swift; sourceTree = "<group>"; };
 		F26993C227DAA0CE004CC884 /* dnd_plannerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dnd_plannerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F26993CF27DAA32C004CC884 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
+		F26993D127DAA34C004CC884 /* NearbyUsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyUsersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 				F26993A727DAA0CC004CC884 /* ContentView.swift */,
 				F26993A927DAA0CE004CC884 /* Assets.xcassets */,
 				F26993AB27DAA0CE004CC884 /* Preview Content */,
+				F26993CF27DAA32C004CC884 /* MapManager.swift */,
+				F26993D127DAA34C004CC884 /* NearbyUsersView.swift */,
 			);
 			path = "dnd-planner";
 			sourceTree = "<group>";
@@ -258,6 +264,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F26993A827DAA0CC004CC884 /* ContentView.swift in Sources */,
+				F26993D027DAA32C004CC884 /* MapManager.swift in Sources */,
+				F26993D227DAA34C004CC884 /* NearbyUsersView.swift in Sources */,
 				F26993A627DAA0CC004CC884 /* dnd_plannerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

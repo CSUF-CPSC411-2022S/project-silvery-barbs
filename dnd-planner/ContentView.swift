@@ -17,7 +17,7 @@ struct ContentView: View {
                     Image (systemName: "person.2.square.stack.fill")
                     Text("List of Participants")
                 }
-            SchedulingInfo()
+            /*SchedulingInfo()
                 .tabItem {
                     Image (systemName: "info")
                     Text("Scheduling Instruction")
@@ -26,7 +26,8 @@ struct ContentView: View {
                 .tabItem {
                     Image(systemName: "plus.square.on.square")
                     Text("Add to List")
-                }
+                }*/
+            
         }
         
         .environmentObject(manager)

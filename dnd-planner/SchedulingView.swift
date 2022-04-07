@@ -10,27 +10,47 @@ import SwiftUI
 struct SchedulingList: View {
     @EnvironmentObject var manager: SchedulingManager
     var body: some View {
-        VStack {
-            EditButton()
-            List {
-                ForEach(manager.scheduling) {
-                    schedule in
-                    VStack (alignment: .leading) {
-                        Text(schedule.name)
-                            .font(.largeTitle)
-                        Text(schedule.availability)
-                            .font(.caption)
+        NavigationView {
+            VStack {
+                Text("List of Participants")
+                    .bold()
+                    .font(.largeTitle)
+                    .padding()
+                HStack{
+                    NavigationLink(destination: SchedulingInfo()) {
+                        Text("Information")
+                    }
+                    .padding()
+                    NavigationLink(destination: AddPerson()) {
+                        Text("Add")
+                    }
+                    .padding()
+                    EditButton()
+                        .padding()
+                }
+                
+                List {
+                    ForEach(manager.scheduling) {
+                        schedule in
+                        VStack (alignment: .leading) {
+                            Text(schedule.name)
+                                .font(.largeTitle)
+                            Text(schedule.availability)
+                                .font(.caption)
+                        }
+                    }
+                    .onDelete {
+                        offset in
+                        manager.scheduling.remove(atOffsets: offset)
+                    }
+                    .onMove {
+                        offset, index in
+                        manager.scheduling.move(fromOffsets: offset, toOffset: index)
                     }
                 }
-                .onDelete {
-                    offset in
-                    manager.scheduling.remove(atOffsets: offset)
-                }
-                .onMove {
-                    offset, index in
-                    manager.scheduling.move(fromOffsets: offset, toOffset: index)
-                }
             }
+            .navigationBarTitle("", displayMode: .inline)
+            .navigationBarHidden(true)
         }
     }
 }

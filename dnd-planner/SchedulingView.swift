@@ -4,119 +4,121 @@
 //
 //  Created by Minkyu Park on 3/8/22.
 //
-import Foundation
+
 import SwiftUI
 
-
-struct ShedulingView: View {
-    @StateObject var scheduling = Scheduling(name: "", startTime: 0, endTime:  0)
-    @SceneStorage ("Name") var name: String = ""
-    @SceneStorage ("Start Time") var startTime: String = ""
-    @SceneStorage ("End Time") var endTime: String = ""
-    
+struct SchedulingList: View {
+    @EnvironmentObject var manager: SchedulingManager
     var body: some View {
-        NavigationView {
-            VStack {
-                Text("Scheduling")
-                    .font(.custom("Courier New", size: 30))
-                    .bold()
-                    .padding()
-                    .foregroundColor(.white)
-                    .border(Color.white)
-                    .background(Color.black)
-                    .cornerRadius(40)
-                VStack {
-                    HStack {
-                        Text("Name: ")
-                            .frame(width: 50, alignment: .trailing)
-                            .padding()
-                            .foregroundColor(.black)
-                            .border(Color.black)
-                            .cornerRadius(10)
-                        TextField("Name", text: $name)
-                            .frame(width: 250, alignment: .trailing)
-                            .padding()
-                            .border(Color.black)
-                            .cornerRadius(10)
-                    }
-                    HStack {
-                        Text("Time: ")
-                            .frame(width: 50, alignment: .trailing)
-                            .padding()
-                            .border(Color.black)
-                            .cornerRadius(10)
-                        TextField("Start Time", text:$startTime)
-                            .padding()
-                            .border(Color.black)
-                            .cornerRadius(10)
-                        TextField("End Time", text: $endTime)
-                            .padding()
-                            .border(Color.black)
-                            .cornerRadius(10)
+        VStack {
+            EditButton()
+            List {
+                ForEach(manager.scheduling) {
+                    schedule in
+                    VStack (alignment: .leading) {
+                        Text(schedule.name)
+                            .font(.largeTitle)
+                        Text(schedule.availability)
+                            .font(.caption)
                     }
                 }
-                .padding(.bottom, 30)
-                Spacer()
-                
-                VStack {
-                    Text("Available Schedule")
-                        .font(.custom("Courier New", size: 20))
-                    HStack (spacing: 0) {
-                        Text("Name: ")
-                        TextField(" Name", text: $name)
-                            .padding(.leading, 100)
-                    }.padding(.leading, 10)
-                    HStack (spacing: 0) {
-                        Text("Available From: ")
-                        TextField(" From", text: $startTime)
-                            .padding(.leading, 35)
-                    }.padding(.leading, 10)
-                    HStack (spacing: 0) {
-                        Text("Available Until: ")
-                        TextField(" Until", text: $endTime)
-                            .padding(.leading, 38)
-                    }.padding(.leading, 10)
+                .onDelete {
+                    offset in
+                    manager.scheduling.remove(atOffsets: offset)
                 }
-                .padding()
-                .border(Color.black)
-                .cornerRadius(10)
-                
-                Spacer()
-                HStack {
-                    Button (action: {
-                        SchedulingInfo()
-                    }) {
-                        Text("Submit")
-                            .bold()
-                            .padding()
-                            .foregroundColor(.white)
-                            .background(Color.black)
-                            .border(Color.white)
-                            .cornerRadius(40)
-                    }
+                .onMove {
+                    offset, index in
+                    manager.scheduling.move(fromOffsets: offset, toOffset: index)
                 }
             }
         }
     }
 }
 
-struct Information: View {
-    @Binding var name: String
-    @Binding var startTime: String
-    @Binding var endTime: String
-    
+struct SchedulingInfo: View {
     var body: some View {
-        Text(name)
-        Text(startTime)
-        Text(endTime)
+        NavigationView {
+            VStack {
+                List {
+                    Section (header: Text("How to add yourself to the list?")){
+                        NavigationLink(destination: Text("Tell us your first and last name")){
+                            Text("Your name")
+                        }
+                        NavigationLink(destination: Text("Tell us your availability in the format of FROM _____ am/pm TO _____ am/pm")){
+                            Text("Your availability")
+                        }
+                    }
+                    Section (header: Text("How to modify the list?")) {
+                        NavigationLink(destination: Text("You can modify the list by pressing the EDIT button at the top!")){
+                            Text("Personalizing list")
+                        }
+                        DisclosureGroup(content: {
+                            NavigationLink(destination: Text("After pressing the edit, press the red - button, then press the DELETE button")){
+                                Text("Deleting")
+                            }
+                            NavigationLink(destination: Text("After pressing the edit, hold the 3 horizonal line to drag the list up and down")){
+                                Text("Dragging")
+                            }
+                        }){
+                            Text("Button functions")
+                        }
+                    }
+                }
+                Spacer()
+            }
+        }
     }
 }
 
-struct ShedulingView_Previews: PreviewProvider {
-    static var previews: some View {
-        ShedulingView()
+struct AddPerson: View {
+    @SceneStorage("personName") var personName: String = ""
+    @SceneStorage("personAvailability") var personAvailability: String = ""
+    @EnvironmentObject var manager: SchedulingManager
+    var body: some View {
+        NavigationView {
+            VStack {
+                HStack {
+                    Text("Person Submission")
+                        .bold()
+                        .font(.largeTitle)
+                }
+                .padding(.bottom, 30)
+                
+                HStack {
+                    Text("Person Name")
+                        .bold()
+                    Spacer()
+                }
+                .padding(.bottom, 5)
+                
+                HStack {
+                    TextField("Person Name", text: $personName)
+                        .modifier(TextEntry())
+                    Spacer()
+                }
+                .padding(.bottom, 20)
+                
+                HStack {
+                    Text("Person Availability")
+                        .bold()
+                    Spacer()
+                }
+                .padding(.bottom, 5)
+                
+                TextEditor(text: $personAvailability)
+                    .modifier(TextEntry())
+                    .padding(.bottom, 30)
+                Button(action: {
+                    manager.scheduling.append(Schedule(name: personName, availability: personAvailability))
+                    personName = ""
+                    personAvailability = ""
+                }) {
+                    Text("Submit")
+                        .modifier(ButtonDesign())
+                }
+                Spacer()
+            }
+            .padding()
+        }
     }
 }
-
-
-

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06A264E427FE6ECD00D0F148 /* Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A264E327FE6ECD00D0F148 /* Modifier.swift */; };
 		06D4E59527DAA1FC00A4EA78 /* Scheduling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D4E59427DAA1FC00A4EA78 /* Scheduling.swift */; };
 		06D4E59727DAA21D00A4EA78 /* SchedulingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D4E59627DAA21D00A4EA78 /* SchedulingView.swift */; };
 		06D4E59A27DAA32700A4EA78 /* SchedulingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D4E59827DAA31A00A4EA78 /* SchedulingTests.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06A264E327FE6ECD00D0F148 /* Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifier.swift; sourceTree = "<group>"; };
 		06D4E59427DAA1FC00A4EA78 /* Scheduling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheduling.swift; sourceTree = "<group>"; };
 		06D4E59627DAA21D00A4EA78 /* SchedulingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulingView.swift; sourceTree = "<group>"; };
 		06D4E59827DAA31A00A4EA78 /* SchedulingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulingTests.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				F26993A727DAA0CC004CC884 /* ContentView.swift */,
 				06D4E59427DAA1FC00A4EA78 /* Scheduling.swift */,
 				06D4E59627DAA21D00A4EA78 /* SchedulingView.swift */,
+				06A264E327FE6ECD00D0F148 /* Modifier.swift */,
 				F26993A927DAA0CE004CC884 /* Assets.xcassets */,
 				F26993AB27DAA0CE004CC884 /* Preview Content */,
 			);
@@ -270,6 +273,7 @@
 				F26993A827DAA0CC004CC884 /* ContentView.swift in Sources */,
 				06D4E59527DAA1FC00A4EA78 /* Scheduling.swift in Sources */,
 				F26993A627DAA0CC004CC884 /* dnd_plannerApp.swift in Sources */,
+				06A264E427FE6ECD00D0F148 /* Modifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

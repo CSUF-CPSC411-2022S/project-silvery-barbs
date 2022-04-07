@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		06A264E427FE6ECD00D0F148 /* Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A264E327FE6ECD00D0F148 /* Modifier.swift */; };
+		06A264E727FE7B5000D0F148 /* SchedulingLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A264E527FE7B4400D0F148 /* SchedulingLaunchTests.swift */; };
 		06D4E59527DAA1FC00A4EA78 /* Scheduling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D4E59427DAA1FC00A4EA78 /* Scheduling.swift */; };
 		06D4E59727DAA21D00A4EA78 /* SchedulingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D4E59627DAA21D00A4EA78 /* SchedulingView.swift */; };
-		06D4E59A27DAA32700A4EA78 /* SchedulingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D4E59827DAA31A00A4EA78 /* SchedulingTests.swift */; };
+		06D4E59A27DAA32700A4EA78 /* SchedulingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D4E59827DAA31A00A4EA78 /* SchedulingUITests.swift */; };
 		F26993A627DAA0CC004CC884 /* dnd_plannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26993A527DAA0CC004CC884 /* dnd_plannerApp.swift */; };
 		F26993A827DAA0CC004CC884 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26993A727DAA0CC004CC884 /* ContentView.swift */; };
 		F26993AA27DAA0CE004CC884 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F26993A927DAA0CE004CC884 /* Assets.xcassets */; };
@@ -39,9 +40,10 @@
 
 /* Begin PBXFileReference section */
 		06A264E327FE6ECD00D0F148 /* Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifier.swift; sourceTree = "<group>"; };
+		06A264E527FE7B4400D0F148 /* SchedulingLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulingLaunchTests.swift; sourceTree = "<group>"; };
 		06D4E59427DAA1FC00A4EA78 /* Scheduling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheduling.swift; sourceTree = "<group>"; };
 		06D4E59627DAA21D00A4EA78 /* SchedulingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulingView.swift; sourceTree = "<group>"; };
-		06D4E59827DAA31A00A4EA78 /* SchedulingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulingTests.swift; sourceTree = "<group>"; };
+		06D4E59827DAA31A00A4EA78 /* SchedulingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulingUITests.swift; sourceTree = "<group>"; };
 		F26993A227DAA0CC004CC884 /* dnd-planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dnd-planner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F26993A527DAA0CC004CC884 /* dnd_plannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dnd_plannerApp.swift; sourceTree = "<group>"; };
 		F26993A727DAA0CC004CC884 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -134,7 +136,8 @@
 			children = (
 				F26993C027DAA0CE004CC884 /* dnd_plannerUITests.swift */,
 				F26993C227DAA0CE004CC884 /* dnd_plannerUITestsLaunchTests.swift */,
-				06D4E59827DAA31A00A4EA78 /* SchedulingTests.swift */,
+				06D4E59827DAA31A00A4EA78 /* SchedulingUITests.swift */,
+				06A264E527FE7B4400D0F148 /* SchedulingLaunchTests.swift */,
 			);
 			path = "dnd-plannerUITests";
 			sourceTree = "<group>";
@@ -289,7 +292,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06D4E59A27DAA32700A4EA78 /* SchedulingTests.swift in Sources */,
+				06D4E59A27DAA32700A4EA78 /* SchedulingUITests.swift in Sources */,
+				06A264E727FE7B5000D0F148 /* SchedulingLaunchTests.swift in Sources */,
 				F26993C327DAA0CE004CC884 /* dnd_plannerUITestsLaunchTests.swift in Sources */,
 				F26993C127DAA0CE004CC884 /* dnd_plannerUITests.swift in Sources */,
 			);

@@ -7,34 +7,19 @@
 
 import SwiftUI
 
-
 struct ContentView: View {
-    @StateObject var manager = SchedulingManager ()
     var body: some View {
+//        Text("Hello, world!")
+//            .padding()
         TabView {
-            SchedulingList()
-                .tabItem {
-                    Image (systemName: "person.2.square.stack.fill")
-                    Text("List of Participants")
+            NearbyUsersView()
+                .tabItem{
+                    Image(systemName: "person.3")
+                    Text("Nearby Users")
                 }
-            /*SchedulingInfo()
-                .tabItem {
-                    Image (systemName: "info")
-                    Text("Scheduling Instruction")
-                }
-            AddPerson()
-                .tabItem {
-                    Image(systemName: "plus.square.on.square")
-                    Text("Add to List")
-                }*/
-            
         }
-        
-        .environmentObject(manager)
     }
 }
-
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

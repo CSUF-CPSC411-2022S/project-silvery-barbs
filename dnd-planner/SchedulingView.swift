@@ -78,28 +78,28 @@ struct AddPerson: View {
         NavigationView {
             VStack {
                 HStack {
-                    Text("Person Submission")
+                    Text("Put Yourself on the List")
                         .bold()
                         .font(.largeTitle)
                 }
                 .padding(.bottom, 30)
                 
                 HStack {
-                    Text("Person Name")
+                    Text("Your Name")
                         .bold()
                     Spacer()
                 }
                 .padding(.bottom, 5)
                 
                 HStack {
-                    TextField("Person Name", text: $personName)
+                    TextField("Your Name", text: $personName)
                         .modifier(TextEntry())
                     Spacer()
                 }
                 .padding(.bottom, 20)
                 
                 HStack {
-                    Text("Person Availability")
+                    Text("Your Availability")
                         .bold()
                     Spacer()
                 }

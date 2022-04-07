@@ -8,16 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var manager = SchedulingManager()
     var body: some View {
-//        Text("Hello, world!")
-//            .padding()
         TabView {
             NearbyUsersView()
                 .tabItem{
                     Image(systemName: "person.3")
                     Text("Nearby Users")
                 }
+            SchedulingList()
+                .tabItem{
+                    Image(systemName: "calendar")
+                    Text("Scheduling List")
+                }
+            
         }
+        .environmentObject(manager)
     }
 }
 

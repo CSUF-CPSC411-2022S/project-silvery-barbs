@@ -46,6 +46,8 @@ struct NearbyUsersView: View {
                         }
                     }
                 }.frame(height: geometry.size.height)
+                    .navigationBarTitle("", displayMode: .inline)
+                    .navigationBarHidden(true)
             }
         }.environmentObject(manager)
     }
@@ -63,8 +65,6 @@ struct NearbyUsersSettingsView: View {
     
     var body: some View {
         VStack {
-            Text("Settings")
-                .font(.largeTitle)
             List {
                 Section(header: Text("Set Radius")) {
                     VStack {
@@ -84,7 +84,7 @@ struct NearbyUsersSettingsView: View {
                     Toggle("Looking to Join Party", isOn: $manager.lookingToJoinParty)
                 }
             }
-        }
+        }.navigationBarTitle("Filter Settings", displayMode: .inline)
     }
 }
 

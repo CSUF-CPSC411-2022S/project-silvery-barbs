@@ -18,13 +18,23 @@ struct ContentView: View {
                 }
             NearbyUsersView()
                 .tabItem{
-                    Image(systemName: "person.3")
+                    Image(systemName: "mappin.and.ellipse")
                     Text("Nearby Users")
                 }
             SchedulingList()
                 .tabItem{
                     Image(systemName: "calendar")
                     Text("Scheduling List")
+                }
+            Messaging()
+                .tabItem{
+                    Image(systemName: "tray.fill")
+                    Text("Inbox")
+                }
+            UserAccountView()
+                .tabItem{
+                    Image(systemName: "person.circle")
+                    Text("Account")
                 }
         }
         .environmentObject(manager)

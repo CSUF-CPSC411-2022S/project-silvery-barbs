@@ -14,6 +14,8 @@
 		06D4E59527DAA1FC00A4EA78 /* Scheduling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D4E59427DAA1FC00A4EA78 /* Scheduling.swift */; };
 		06D4E59727DAA21D00A4EA78 /* SchedulingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D4E59627DAA21D00A4EA78 /* SchedulingView.swift */; };
 		06D4E59A27DAA32700A4EA78 /* SchedulingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D4E59827DAA31A00A4EA78 /* SchedulingUITests.swift */; };
+		F243276F281B36710079CC86 /* Messaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = F243276E281B36710079CC86 /* Messaging.swift */; };
+		F24327712821D5030079CC86 /* UserAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24327702821D5030079CC86 /* UserAccountView.swift */; };
 		F26993A627DAA0CC004CC884 /* dnd_plannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26993A527DAA0CC004CC884 /* dnd_plannerApp.swift */; };
 		F26993A827DAA0CC004CC884 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26993A727DAA0CC004CC884 /* ContentView.swift */; };
 		F26993AA27DAA0CE004CC884 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F26993A927DAA0CE004CC884 /* Assets.xcassets */; };
@@ -50,6 +52,8 @@
 		06D4E59427DAA1FC00A4EA78 /* Scheduling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheduling.swift; sourceTree = "<group>"; };
 		06D4E59627DAA21D00A4EA78 /* SchedulingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulingView.swift; sourceTree = "<group>"; };
 		06D4E59827DAA31A00A4EA78 /* SchedulingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulingUITests.swift; sourceTree = "<group>"; };
+		F243276E281B36710079CC86 /* Messaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messaging.swift; sourceTree = "<group>"; };
+		F24327702821D5030079CC86 /* UserAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountView.swift; sourceTree = "<group>"; };
 		F26993A227DAA0CC004CC884 /* dnd-planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dnd-planner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F26993A527DAA0CC004CC884 /* dnd_plannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dnd_plannerApp.swift; sourceTree = "<group>"; };
 		F26993A727DAA0CC004CC884 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 			children = (
 				F26993A527DAA0CC004CC884 /* dnd_plannerApp.swift */,
 				F26993A727DAA0CC004CC884 /* ContentView.swift */,
+				F243276E281B36710079CC86 /* Messaging.swift */,
 				06D4E59427DAA1FC00A4EA78 /* Scheduling.swift */,
 				06D4E59627DAA21D00A4EA78 /* SchedulingView.swift */,
 				06A264E327FE6ECD00D0F148 /* Modifier.swift */,
@@ -123,6 +128,7 @@
 				7A6A681227ED1ADD00EFA86C /* UserView.swift */,
 				F26993CF27DAA32C004CC884 /* MapManager.swift */,
 				F26993D127DAA34C004CC884 /* NearbyUsersView.swift */,
+				F24327702821D5030079CC86 /* UserAccountView.swift */,
 			);
 			path = "dnd-planner";
 			sourceTree = "<group>";
@@ -284,11 +290,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F243276F281B36710079CC86 /* Messaging.swift in Sources */,
 				06D4E59727DAA21D00A4EA78 /* SchedulingView.swift in Sources */,
 				F26993A827DAA0CC004CC884 /* ContentView.swift in Sources */,
 				06D4E59527DAA1FC00A4EA78 /* Scheduling.swift in Sources */,
 				F26993D027DAA32C004CC884 /* MapManager.swift in Sources */,
 				F26993D227DAA34C004CC884 /* NearbyUsersView.swift in Sources */,
+				F24327712821D5030079CC86 /* UserAccountView.swift in Sources */,
 				F26993A627DAA0CC004CC884 /* dnd_plannerApp.swift in Sources */,
 				7A6A681127ED1AB500EFA86C /* User.swift in Sources */,
 				7A6A681327ED1ADD00EFA86C /* UserView.swift in Sources */,

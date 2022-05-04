@@ -8,8 +8,8 @@
 import Foundation
 
 class User: ObservableObject, Identifiable {
+    
     @Published var username: String
-    //how do you hash passwords and create a secure database???
     @Published var password: String
     @Published var email: String?
     @Published var phonenumber: String?
@@ -17,8 +17,6 @@ class User: ObservableObject, Identifiable {
     @Published var DM_status: Bool
     @Published var group_status: Bool
     @Published var verified: Bool
-    //TODO
-    //how do you find a user location??? need a var for that
     
     //full user account
     init(username: String, password: String, email: String, phonenumber: String, DM_status: Bool, group_status: Bool){
@@ -83,4 +81,8 @@ class User: ObservableObject, Identifiable {
     func set_user_group_status(){
         //TODO UI is set up, how to link it to content view?
     }
+}
+
+class User_Manager: ObservableObject {
+    @Published var user_list: [User] = []
 }

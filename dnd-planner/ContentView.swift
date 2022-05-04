@@ -11,6 +11,11 @@ struct ContentView: View {
     @StateObject var manager = SchedulingManager()
     var body: some View {
         TabView {
+            UserView()
+                .tabItem{
+                    Image(systemName: "person")
+                    Text("User Profile")
+                }
             NearbyUsersView()
                 .tabItem{
                     Image(systemName: "person.3")
@@ -21,7 +26,6 @@ struct ContentView: View {
                     Image(systemName: "calendar")
                     Text("Scheduling List")
                 }
-            
         }
         .environmentObject(manager)
     }

@@ -11,6 +11,11 @@ struct ContentView: View {
     @StateObject var manager = SchedulingManager()
     var body: some View {
         TabView {
+            UserView()
+                .tabItem{
+                    Image(systemName: "person")
+                    Text("User Profile")
+                }
             NearbyUsersView()
                 .tabItem{
                     Image(systemName: "mappin.and.ellipse")

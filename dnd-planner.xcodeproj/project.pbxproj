@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A6A681127ED1AB500EFA86C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6A681027ED1AB400EFA86C /* User.swift */; };
+		7A6A681327ED1ADD00EFA86C /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6A681227ED1ADD00EFA86C /* UserView.swift */; };
 		06A264E427FE6ECD00D0F148 /* Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A264E327FE6ECD00D0F148 /* Modifier.swift */; };
 		06A264E727FE7B5000D0F148 /* SchedulingLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A264E527FE7B4400D0F148 /* SchedulingLaunchTests.swift */; };
 		06D4E59527DAA1FC00A4EA78 /* Scheduling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D4E59427DAA1FC00A4EA78 /* Scheduling.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A6A681027ED1AB400EFA86C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7A6A681227ED1ADD00EFA86C /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		06A264E327FE6ECD00D0F148 /* Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifier.swift; sourceTree = "<group>"; };
 		06A264E527FE7B4400D0F148 /* SchedulingLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulingLaunchTests.swift; sourceTree = "<group>"; };
 		06D4E59427DAA1FC00A4EA78 /* Scheduling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheduling.swift; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 				06A264E327FE6ECD00D0F148 /* Modifier.swift */,
 				F26993A927DAA0CE004CC884 /* Assets.xcassets */,
 				F26993AB27DAA0CE004CC884 /* Preview Content */,
+				7A6A681027ED1AB400EFA86C /* User.swift */,
+				7A6A681227ED1ADD00EFA86C /* UserView.swift */,
 				F26993CF27DAA32C004CC884 /* MapManager.swift */,
 				F26993D127DAA34C004CC884 /* NearbyUsersView.swift */,
 				F24327702821D5030079CC86 /* UserAccountView.swift */,
@@ -292,6 +298,8 @@
 				F26993D227DAA34C004CC884 /* NearbyUsersView.swift in Sources */,
 				F24327712821D5030079CC86 /* UserAccountView.swift in Sources */,
 				F26993A627DAA0CC004CC884 /* dnd_plannerApp.swift in Sources */,
+				7A6A681127ED1AB500EFA86C /* User.swift in Sources */,
+				7A6A681327ED1ADD00EFA86C /* UserView.swift in Sources */,
 				06A264E427FE6ECD00D0F148 /* Modifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

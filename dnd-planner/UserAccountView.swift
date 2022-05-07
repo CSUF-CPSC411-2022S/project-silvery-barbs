@@ -62,7 +62,7 @@ struct FriendListItem: View {
             Text(username)
             Spacer()
             Button(action: {}) {
-                Text("Send Message")
+                Image(systemName: "envelope")
             }
         }
     }
@@ -70,7 +70,7 @@ struct FriendListItem: View {
 
 struct UserAccountView_Previews: PreviewProvider {
     static var previews: some View {
-//        UserAccountView()
+        UserAccountView()
         FriendsListView()
     }
 }

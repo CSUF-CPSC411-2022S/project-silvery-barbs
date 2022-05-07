@@ -46,8 +46,8 @@ struct NearbyUsersView: View {
                         }
                     }
                 }.frame(height: geometry.size.height)
-                    .navigationBarTitle("", displayMode: .inline)
-                    .navigationBarHidden(true)
+                    .navigationBarTitle("Nearby Users", displayMode: .inline)
+                    .navigationBarHidden(false)
             }
         }.environmentObject(manager)
     }

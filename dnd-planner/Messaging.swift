@@ -45,15 +45,15 @@ struct Messaging: View {
 
 struct Messaging_Previews: PreviewProvider {
     static var previews: some View {
-        //        Messaging()
-        //        MessageThreadView()
+        Messaging()
+        MessageThreadView()
         NewMessageView()
     }
 }
 
 // screen displaying message thread
 struct MessageThreadView: View {
-    @State var text: String = ""
+    @SceneStorage("text") var text: String = ""
     var body: some View {
         GeometryReader { geometry in
             VStack {

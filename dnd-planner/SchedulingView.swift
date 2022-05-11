@@ -14,7 +14,6 @@ struct SchedulingList: View {
             VStack {
                 Text("List of Participants")
                     .bold()
-                    .font(.largeTitle)
                     .padding()
                 HStack{
                     NavigationLink(destination: SchedulingInfo()) {
@@ -34,9 +33,11 @@ struct SchedulingList: View {
                         schedule in
                         VStack (alignment: .leading) {
                             Text(schedule.name)
-                                .font(.largeTitle)
+                                .font(.headline)
+                                .padding(2)
                             Text(schedule.availability)
-                                .font(.caption)
+                                .font(.subheadline)
+                                .padding(2)
                         }
                     }
                     .onDelete {
@@ -57,27 +58,31 @@ struct SchedulingList: View {
 
 struct SchedulingInfo: View {
     var body: some View {
+        Image("DnD-Symbol")
+            .resizable()
+            .scaledToFit()
+            .frame(width:300)
         NavigationView {
             VStack {
                 List {
-                    Section (header: Text("How to add yourself to the list?")){
-                        NavigationLink(destination: Text("Tell us your first and last name")){
-                            Text("Your name")
+                    Section (header: Text("How to add schedule or notes to the list?")){
+                        NavigationLink(destination: Text("In the title field, enter a person's name or title you wish to store.")){
+                            Text("Title Field")
                         }
-                        NavigationLink(destination: Text("Tell us your availability in the format of FROM _____ am/pm TO _____ am/pm")){
-                            Text("Your availability")
+                        NavigationLink(destination: Text("In the availability / notes field, enter information you wish to store.")){
+                            Text("Availability / Notes")
                         }
                     }
                     Section (header: Text("How to modify the list?")) {
-                        NavigationLink(destination: Text("You can modify the list by pressing the EDIT button at the top!")){
-                            Text("Personalizing list")
+                        NavigationLink(destination: Text("You can modify the list by pressing the EDIT button at the top! Once finished, press DONE.")){
+                            Text("Personalizing the List")
                         }
                         DisclosureGroup(content: {
-                            NavigationLink(destination: Text("After pressing the edit, press the red - button, then press the DELETE button")){
-                                Text("Deleting")
+                            NavigationLink(destination: Text("Press EDIT, press the red (-) button, then press the DELETE button. Once finished, press DONE.")){
+                                Text("Deleting the List")
                             }
-                            NavigationLink(destination: Text("After pressing the edit, hold the 3 horizonal line to drag the list up and down")){
-                                Text("Dragging")
+                            NavigationLink(destination: Text("Press EDIT, hold the 3 horizonal line on the right and order the list up / down. Once finished, press DONE.")){
+                                Text("Ordering the List")
                             }
                         }){
                             Text("Button functions")
@@ -98,29 +103,40 @@ struct AddPerson: View {
         NavigationView {
             VStack {
                 HStack {
-                    Text("Put Yourself on the List")
-                        .bold()
-                        .font(.largeTitle)
+                    Text("Adding to the List")
+                        .font(.custom("System", size: 30))
+                        .padding()
+                        .background(Color.red)
+                        .foregroundColor(Color.white)
+                        .cornerRadius(10)
                 }
                 .padding(.bottom, 30)
                 
                 HStack {
-                    Text("Your Name")
+                    Text("Title")
                         .bold()
+                        .padding(5)
+                        .background(Color.gray)
+                        .foregroundColor(Color.white)
+                        .cornerRadius(10)
                     Spacer()
                 }
                 .padding(.bottom, 5)
                 
                 HStack {
-                    TextField("Your Name", text: $personName)
+                    TextField("Enter Title", text: $personName)
                         .modifier(TextEntry())
                     Spacer()
                 }
                 .padding(.bottom, 20)
                 
                 HStack {
-                    Text("Your Availability")
+                    Text("Availability / Note")
                         .bold()
+                        .padding(5)
+                        .background(Color.gray)
+                        .foregroundColor(Color.white)
+                        .cornerRadius(10)
                     Spacer()
                 }
                 .padding(.bottom, 5)
@@ -133,7 +149,7 @@ struct AddPerson: View {
                     personName = ""
                     personAvailability = ""
                 }) {
-                    Text("Submit")
+                    Text("Add to List")
                         .modifier(ButtonDesign())
                 }
                 Spacer()

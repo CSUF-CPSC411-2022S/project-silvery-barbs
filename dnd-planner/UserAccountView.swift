@@ -10,21 +10,22 @@ import SwiftUI
 struct UserAccountView: View {
     var body: some View {
         VStack {
-        NavigationView {
-            List {
-                NavigationLink(destination: UserProfileView()) {
-                    Label("View Profile", systemImage: "person.text.rectangle.fill")
+            Text("User Account")
+                .bold()
+                .padding()
+            NavigationView {
+                List {
+                    NavigationLink(destination: UserProfileView()) {
+                        Label("View Profile", systemImage: "person.text.rectangle.fill")
+                    }
+                    NavigationLink(destination: FriendsListView()) {
+                        Label("Friends List", systemImage: "person.2.fill")
+                    }
+                    Text("Sign in / sign out")
+                    Text("Sign up")
                 }
-                NavigationLink(destination: FriendsListView()) {
-                    Label("Friends List", systemImage: "person.2.fill")
-                }
-                Text("Sign in/sign out")
-                Text("Sign up")
             }
         }
-        }
-        .navigationBarTitle("User Account", displayMode: .inline)
-        .navigationBarHidden(false)
     }
 }
 

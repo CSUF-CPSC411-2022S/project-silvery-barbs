@@ -85,8 +85,7 @@ struct UserView: View {
                     }
                     HStack{
                         Button(action: {
-                            ///*
-                            //actually creating the entry into a list
+                            //Creates accounts and appends it to the User_Manager
                             if let valid_username = String?(username), let valid_password = String?(password){
                                 user.username = username
                                 user.password = password
@@ -113,6 +112,7 @@ struct UserView: View {
                                 .cornerRadius(10)
                             }
                     }
+                    //Goes to another page after clicking login
                     NavigationLink(destination: User_Information()){
                         Text("Login")
                             .bold()

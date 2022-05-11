@@ -10,8 +10,8 @@ import Foundation
 class SchedulingManager: ObservableObject {
     @Published var scheduling: [Schedule] = []
     init() {
-        scheduling.append(Schedule(name: "Ray", availability: "FROM 7 pm TO 10 pm"))
-        scheduling.append(Schedule(name: "Kally", availability: "FROM 5 pm TO 8 pm"))
+        scheduling.append(Schedule(name: "Ray", availability: "meet with Kally from 7 pm to 10 pm"))
+        scheduling.append(Schedule(name: "Kally", availability: "meet with Ray from 7 pm to 10 pm"))
     }
 }
 

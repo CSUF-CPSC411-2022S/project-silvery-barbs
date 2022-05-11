@@ -10,8 +10,9 @@ import SwiftUI
 struct TextEntry: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .padding(2)
+            .padding(5)
             .border(Color.black)
+            .cornerRadius(10)
             .background(Color.white)
     }
 }
@@ -20,7 +21,7 @@ struct ButtonDesign: ViewModifier {
     func body(content: Content) -> some View {
         content
             .padding()
-            .background(Color.black)
+            .background(Color.red)
             .foregroundColor(Color.white)
             .cornerRadius(10)
     }

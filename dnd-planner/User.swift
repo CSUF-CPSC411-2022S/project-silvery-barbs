@@ -69,20 +69,13 @@ class User: ObservableObject, Identifiable {
         
         self.verified = false
     }
-    
-    //TODO
-    //create a function to verify users
-    //create functions to add emails and phone numbers to already created accounts
-    
-    func set_user_DM_status(){
-        //TODO UI is set up, how to link it to content view?
-    }
-    
-    func set_user_group_status(){
-        //TODO UI is set up, how to link it to content view?
-    }
 }
 
 class User_Manager: ObservableObject {
     @Published var user_list: [User] = []
+    
+    init(){
+        user_list.append(User(username: "dannyb", password: "sticksandstones", DM_status: false, group_status: true))
+        user_list.append(User(username: "crystalline", password: "sorrynotsorry", email: "lalafelsarecute@gmail.com", DM_status: false, group_status: true))
+    }
 }

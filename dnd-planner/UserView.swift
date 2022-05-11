@@ -6,25 +6,9 @@
 //
 
 import SwiftUI
-//TODO
-//insert information code for user details
-//insert User_Details(user: User) (necessary?)
 
 struct UserView: View {
-    /*
     @StateObject var manager = User_Manager()
-    //these @'s used to be state
-    @State var username: String = ""
-    @State var password: String = ""
-    @State var email: String = ""
-    @State var phonenumber: String = ""
-    
-    @State var DM_status = false
-    @State var group_status = false
-     */
-    //@EnvironmentObject var manager: User_Manager
-    @StateObject var manager = User_Manager()
-    
     @StateObject var user = User(username: "", password: "", email: "", phonenumber: "", DM_status: false, group_status: false)
     @State var username: String = ""
     @State var password: String = ""
@@ -52,135 +36,53 @@ struct UserView: View {
                     //user info
                     HStack {
                         Text("Username: ")
-                            
                             .frame(width: geometry.size.width/3, alignment: Alignment.leading)
                             
-                            /*
-                            .font(.custom("Courier New", size: 20))
-                            .foregroundColor(Color.white)
-                            .padding(10)
-                            .background(Color.black)
-                            .cornerRadius(10)
-                             */
                         TextField("Username Here", text: $username)
-                        
                             .font(.custom("System", size: 14))
                             .frame(width: geometry.size.width/3, alignment: Alignment.trailing)
-                        
-                            /*
-                            .font(.custom("Arial", size: 20))
-                            .frame(width: 250, alignment: .trailing)
-                             */
+
                     }
                     HStack {
                         Text("Password: ")
-                        
                             .frame(width: geometry.size.width/3, alignment: Alignment.leading)
                         
-                            /*
-                            .font(.custom("Courier New", size: 20))
-                            .foregroundColor(Color.white)
-                            .padding(10)
-                            .background(Color.black)
-                            .cornerRadius(10)
-                             */
                         TextField("Password Here", text: $password)
-                        
                             .font(.custom("System", size: 14))
                             .frame(width: geometry.size.width/3, alignment: Alignment.trailing)
-                        
-                            /*
-                            .font(.custom("Arial", size: 20))
-                            .frame(width: 250, alignment: .trailing)
-                             */
                     }
                     HStack {
                         Text("Email: ")
-                        
                             .frame(width: geometry.size.width/3, alignment: Alignment.leading)
                         
-                            /*
-                            .font(.custom("Courier New", size: 20))
-                            .foregroundColor(Color.white)
-                            .padding(10)
-                            .background(Color.black)
-                            .cornerRadius(10)
-                             */
                         TextField("Email Here", text: $email)
-                        
                             .font(.custom("System", size: 14))
                             .frame(width: geometry.size.width/3, alignment: Alignment.trailing)
-                        
-                            /*
-                            .font(.custom("Arial", size: 20))
-                            .frame(width: 250, alignment: .trailing)
-                             */
                     }
                     HStack {
                         Text("Phone Number: ")
-                            
                             .frame(width: geometry.size.width/3, alignment: Alignment.leading)
                             
-                            /*
-                            .font(.custom("Courier New", size: 20))
-                            .foregroundColor(Color.white)
-                            .padding(10)
-                            .background(Color.black)
-                            .cornerRadius(10)
-                             */
                         TextField("Phone Number Here", text: $phonenumber)
-                        
                             .font(.custom("System", size: 14))
                             .frame(width: geometry.size.width/3, alignment: Alignment.trailing)
-                        
-                            /*
-                            .font(.custom("Arial", size: 20))
-                            .frame(width: 250, alignment: .trailing)
-                             */
                     }
                     HStack {
                         Text("Looking to DM? ")
-                        
                             .frame(width: geometry.size.width/3, alignment: Alignment.leading)
-                        
-                            /*
-                            .foregroundColor(Color.white)
-                            .padding(10)
-                            .background(Color.black)
-                            .cornerRadius(10)
-                             */
                         
                             Toggle("", isOn: $DM_status)
                                 .font(.custom("System", size: 14))
                                 .frame(width: geometry.size.width/3, alignment: .trailing)
-                        
                     }
                     HStack {
                         Text("Looking for a group? ")
-                        
                             .frame(width: geometry.size.width/3, alignment: Alignment.leading)
-                            
-                            /*
-                            .foregroundColor(Color.white)
-                            .padding(10)
-                            .background(Color.black)
-                            .cornerRadius(10)
-                             */
                         
                             Toggle("", isOn: $group_status)
                             .font(.custom("System", size: 14))
                             .frame(width: geometry.size.width/3, alignment: .trailing)
                     }
-                    /*
-                    HStack{
-                         Button(action: {
-                             print("Secret message")
-                         })  {
-                             Text("Create Account")
-                                 .font(.custom("System", size: 14))
-                         }
-                    }
-                     */
                     HStack{
                         Button(action: {
                             ///*
@@ -194,11 +96,12 @@ struct UserView: View {
                                 user.group_status = group_status
                                 
                                 print("Account Created Successfully")
+                                
+                                manager.user_list.append(user)
                              }
                              else {
                                 print("Please Try Again")
                              }
-                             //*/
                         })  {
                             Text("Create Account")
                                 .bold()
@@ -211,15 +114,14 @@ struct UserView: View {
                             }
                     }
                     NavigationLink(destination: User_Information()){
-                        Text("View User Information")
+                        Text("Login")
                             .bold()
                             .font(.custom("System", size: 14))
                             .padding(5)
-                            .foregroundColor(.white)
-                            .background(Color.gray)
+                            .foregroundColor(.black)
+                            .background(Color.red)
                             .cornerRadius(10)
                     }
-                    //Report(message: $message)
                 }
             }.environmentObject(manager)
         }
@@ -290,24 +192,6 @@ struct User_Information: View{
         }
     }
 }
- 
-
-struct Report: View{
-    @ObservedObject var user: User
-    
-    var body: some View{
-        VStack{
-            HStack{
-                
-            }
-        }
-    }
-}
-
-
-
-
-
 
 struct Information: View {
     @Binding var username: String
@@ -334,16 +218,3 @@ struct UserView_Previews: PreviewProvider {
         ContentView()
     }
 }
-/*
-struct User_Details: View{
-    @ObservedObject var user: User
-    
-    var body: some View{
-        VStack{
-            HStack{
-                //insert user information here
-            }
-        }
-    }
-}
-*/
